@@ -1,4 +1,4 @@
-# @skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget
+# @skywize-gmbh/backstage-home-visit-tracker-widget
 
 A small, self-contained [Backstage](https://backstage.io) frontend plugin that
 tracks the catalog entities a user opens and surfaces them again:
@@ -17,8 +17,8 @@ The plugin ships for **both** frontend systems:
 
 | Frontend system | Import from |
 | --- | --- |
-| Classic (legacy) | `@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget` |
-| New Frontend System | `@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget/alpha` |
+| Classic (legacy) | `@skywize-gmbh/backstage-home-visit-tracker-widget` |
+| New Frontend System | `@skywize-gmbh/backstage-home-visit-tracker-widget/alpha` |
 
 Verified against Backstage `1.50.x` (`@backstage/frontend-plugin-api` `^0.16`,
 `@backstage/plugin-home-react` `^0.1.37`).
@@ -52,13 +52,13 @@ Without one of the above, installing this plugin alone won't show anything.
 From your Backstage repo root:
 
 ```bash
-yarn --cwd packages/app add @skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget
+yarn --cwd packages/app add @skywize-gmbh/backstage-home-visit-tracker-widget
 ```
 
 Or, with npm:
 
 ```bash
-npm install @skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget -w packages/app
+npm install @skywize-gmbh/backstage-home-visit-tracker-widget -w packages/app
 ```
 
 ---
@@ -70,7 +70,7 @@ npm install @skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget -w pack
 ```ts
 // packages/app/src/App.tsx
 import { createApp } from '@backstage/frontend-defaults';
-import visitedPlugin from '@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget/alpha';
+import visitedPlugin from '@skywize-gmbh/backstage-home-visit-tracker-widget/alpha';
 
 export const app = createApp({
   features: [
@@ -94,7 +94,7 @@ In the New Frontend System this is typically done with an entity-page card or
 content extension that renders `<VisitTracker />` (it renders nothing):
 
 ```tsx
-import { VisitTracker } from '@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget';
+import { VisitTracker } from '@skywize-gmbh/backstage-home-visit-tracker-widget';
 ```
 
 If you keep a custom `EntityPage`, simply render `<VisitTracker />` once inside
@@ -110,7 +110,7 @@ Add the cards to your custom home page:
 
 ```tsx
 // packages/app/src/components/home/HomePage.tsx
-import { MostVisitedCard, RecentlyVisitedCard } from '@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget';
+import { MostVisitedCard, RecentlyVisitedCard } from '@skywize-gmbh/backstage-home-visit-tracker-widget';
 
 // inside your <HomePageGrid> / layout:
 <MostVisitedCard />
@@ -122,7 +122,7 @@ import { MostVisitedCard, RecentlyVisitedCard } from '@skywize-gmbh/backstage-pl
 ```tsx
 // packages/app/src/App.tsx
 import { SettingsLayout } from '@backstage/plugin-user-settings';
-import { LocalDataSettingsContent } from '@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget';
+import { LocalDataSettingsContent } from '@skywize-gmbh/backstage-home-visit-tracker-widget';
 
 const settingsPage = (
   <SettingsLayout>
@@ -140,7 +140,7 @@ Drop the tracker into your entity page:
 
 ```tsx
 // packages/app/src/components/catalog/EntityPage.tsx
-import { VisitTracker } from '@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget';
+import { VisitTracker } from '@skywize-gmbh/backstage-home-visit-tracker-widget';
 
 const entityPage = (
   <>
@@ -159,7 +159,7 @@ registered through a small, framework-agnostic API. This plugin registers its
 own row on import:
 
 ```ts
-import { registerLocalDataReset } from '@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget';
+import { registerLocalDataReset } from '@skywize-gmbh/backstage-home-visit-tracker-widget';
 
 registerLocalDataReset({
   id: 'visited-entities',
