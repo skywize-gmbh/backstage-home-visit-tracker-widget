@@ -32,6 +32,10 @@ one. A clean `@backstage/create-app` scaffold has no home page by default, so
 you need [`@backstage/plugin-home`](https://backstage.io/docs/getting-started/homepage)
 installed and set up first:
 
+```bash
+yarn --cwd packages/app add @backstage/plugin-home
+```
+
 - **Classic (legacy) frontend system**: install `@backstage/plugin-home` and
   mount a `<HomePageGrid>` (inside a `<HomePage>`) on your home route — that's
   what `<MostVisitedCard />` / `<RecentlyVisitedCard />` render into.
@@ -49,6 +53,12 @@ From your Backstage repo root:
 
 ```bash
 yarn --cwd packages/app add @skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget
+```
+
+Or, with npm:
+
+```bash
+npm install @skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget -w packages/app
 ```
 
 ---
