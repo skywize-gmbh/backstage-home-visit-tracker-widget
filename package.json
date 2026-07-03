@@ -1,5 +1,5 @@
 {
-  "name": "@skywize-gmbh/backstage-plugin-visited",
+  "name": "@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget",
   "version": "0.1.1",
   "description": "Backstage frontend plugin: \"Top Visited\" and \"Recently Visited\" homepage widgets plus a shared, extensible \"Local data\" settings tab. Supports both the classic and the New Frontend System.",
   "keywords": [
@@ -11,13 +11,13 @@
   ],
   "license": "Apache-2.0",
   "author": "Skywize",
-  "homepage": "https://github.com/skywize-gmbh/backstage-plugin-visited#readme",
+  "homepage": "https://github.com/skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/skywize-gmbh/backstage-plugin-visited.git"
+    "url": "https://github.com/skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget.git"
   },
   "bugs": {
-    "url": "https://github.com/skywize-gmbh/backstage-plugin-visited/issues"
+    "url": "https://github.com/skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget/issues"
   },
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -58,9 +58,9 @@
   "backstage": {
     "role": "frontend-plugin",
     "pluginId": "visited",
-    "pluginPackage": "@skywize-gmbh/backstage-plugin-visited",
+    "pluginPackage": "@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget",
     "pluginPackages": [
-      "@skywize-gmbh/backstage-plugin-visited"
+      "@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget"
     ]
   },
   "sideEffects": [

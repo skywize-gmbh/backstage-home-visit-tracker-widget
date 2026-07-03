@@ -1,5 +1,5 @@
 /**
- * New Frontend System entry point for `@skywize-gmbh/backstage-plugin-visited`.
+ * New Frontend System entry point for `@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget`.
  *
  * Provides:
  *  - two home-page widgets ("Top Visited", "Recently Visited"), installable
@@ -73,7 +73,7 @@ const localDataSettingsPage = SubPageBlueprint.make({
  * The New Frontend System plugin. Install it in `packages/app/src/App.tsx`:
  *
  * ```ts
- * import visitedPlugin from '@skywize-gmbh/backstage-plugin-visited/alpha';
+ * import visitedPlugin from '@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget/alpha';
  * export const app = createApp({ features: [visitedPlugin] });
  * ```
  */
