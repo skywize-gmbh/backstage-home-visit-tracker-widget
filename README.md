@@ -15,7 +15,7 @@ database, or API is required.**
 
 | Recently Visited | Top Visited |
 | --- | --- |
-| ![Recently Visited widget](docs/images/recently-visited.png) | ![Top Visited widget](docs/images/top-visited.png) |
+| ![Recently Visited widget](https://raw.githubusercontent.com/skywize-gmbh/backstage-home-visit-tracker-widget/main/docs/images/recently-visited.png) | ![Top Visited widget](https://raw.githubusercontent.com/skywize-gmbh/backstage-home-visit-tracker-widget/main/docs/images/top-visited.png) |
 
 The plugin ships for **both** frontend systems:
 
